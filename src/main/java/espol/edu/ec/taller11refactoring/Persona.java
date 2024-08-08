@@ -1,3 +1,5 @@
+package espol.edu.ec.taller11refactoring;
+
 public class Persona {
     private String nombre;
     private int edad;

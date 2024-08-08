@@ -1,11 +1,24 @@
-public class Main{
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package espol.edu.ec.taller11refactoring;
+
+import java.time.LocalDate;
+
+/**
+ *
+ * @author fabri
+ */
+public class Taller11Refactoring {
+
     static SistemaAtencionMedico sistemaAtencionMedica;
     public static void main(String[] args) {
         inicializar();
         Paciente paciente = sistemaAtencionMedica.obtenerPaciente("Dario");
         ServicioMedico servicioMedico = sistemaAtencionMedica.obtenerServicioMedico("Psiquiatria");
         Medico medico = sistemaAtencionMedica.obtenerMedico("Nohelia");
-        Consulta consulta = new Consulta(05,05,2002,"12:05",paciente,medico,servicioMedico,"dvasdv","asdvas",null);
+        Consulta consulta = new Consulta(LocalDate.of(2002,05,05), "12:05",paciente,medico,servicioMedico,"dvasdv","asdvas",null);
         sistemaAtencionMedica.agendarConsulta(paciente,consulta);
     }
 
@@ -18,4 +31,4 @@ public class Main{
         sistemaAtencionMedica.agregarMedico(medico);
         sistemaAtencionMedica.agregarServicioMedico(servicioMedico);
     }
-} 
+}

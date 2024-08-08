@@ -1,3 +1,5 @@
+package espol.edu.ec.taller11refactoring;
+
 public class ServicioMedico {
     private String nombre;
     private String descripcion;
@@ -45,7 +47,6 @@ public class ServicioMedico {
     }
 
     public void setDuracion(int duracion) {
-
         this.duracion = duracion;
     }
 }

@@ -1,3 +1,5 @@
+package espol.edu.ec.taller11refactoring;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,6 +7,9 @@ public class SistemaAtencionMedico {
     private List<Paciente> pacientes;
     private List<Medico> medicos;
     private List<ServicioMedico> serviciosMedicos;
+    //REPLACE MAGIC NUMBER WITH SYMBOLIC CONSTANT
+    private static final double DESCUENTO_ADULTOS_MAYORES = 0.25;
+    private static final int EDAD_TERCERA_EDAD = 65;
 
     public SistemaAtencionMedico() {
         this.pacientes = new ArrayList<>();
@@ -34,8 +39,9 @@ public class SistemaAtencionMedico {
 
     public double calcularValorFinalConsulta(double costoConsulta, int edadPaciente){
         double valorARestar = 0;
-        if(edadPaciente>=65){
-            valorARestar = costoConsulta*0.25; //0.25 es el descuento para adultos mayores
+        
+        if(edadPaciente>=EDAD_TERCERA_EDAD){
+            valorARestar = costoConsulta*DESCUENTO_ADULTOS_MAYORES; //0.25 es el descuento para adultos mayores
         }
         return costoConsulta-valorARestar;
     }
