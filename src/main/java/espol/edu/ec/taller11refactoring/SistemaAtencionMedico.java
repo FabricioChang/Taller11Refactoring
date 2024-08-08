@@ -7,7 +7,7 @@ public class SistemaAtencionMedico {
     private List<Paciente> pacientes;
     private List<Medico> medicos;
     private List<ServicioMedico> serviciosMedicos;
-    //REPLACE MAGIC NUMBER WITH SYMBOLIC CONSTANT
+    //cambiamos por lo del numero magico
     private static final double descuento_de_adultos_mayores = 0.25;
     private static final int edad_de_tercera_edad = 65;
 
