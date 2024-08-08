@@ -1,16 +1,12 @@
 package espol.edu.ec.taller11refactoring;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 public class Consulta {
-    //ANTES
-    // public int dia;
-    // public int mes;
-    // public int año;
-
     private LocalDate date;
-    private String hora;
+    private LocalTime hora;
     private Paciente paciente;
     private Medico medico;
     private ServicioMedico servicioMedico;
@@ -19,7 +15,7 @@ public class Consulta {
     private String tratamiento;
     private List<String> examenesMedicos;
 
-    public Consulta(LocalDate date, String hora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
+    public Consulta(LocalDate date, LocalTime hora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
         this.date = date;
         this.hora = hora;
         this.servicioMedico = servicioMedico;
@@ -28,11 +24,19 @@ public class Consulta {
         this.realizada = false;
     }
 
-    public String getHora() {
+    public LocalDate getFecha(){
+        return date;
+    }
+    
+    public void setFecha(LocalDate date){
+        this.date = date;
+    }
+    
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 

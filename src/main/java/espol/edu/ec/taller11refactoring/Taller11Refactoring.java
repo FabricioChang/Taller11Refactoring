@@ -5,6 +5,7 @@
 package espol.edu.ec.taller11refactoring;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Taller11Refactoring {
         Paciente paciente = sistemaAtencionMedica.obtenerPaciente("Dario");
         ServicioMedico servicioMedico = sistemaAtencionMedica.obtenerServicioMedico("Psiquiatria");
         Medico medico = sistemaAtencionMedica.obtenerMedico("Nohelia");
-        Consulta consulta = new Consulta(LocalDate.of(2002,05,05), "12:05",paciente,medico,servicioMedico,"dvasdv","asdvas",null);
+        Consulta consulta = new Consulta(LocalDate.of(2002,05,05),LocalTime.of(12, 5),paciente,medico,servicioMedico,"dvasdv","asdvas",null);
         sistemaAtencionMedica.agendarConsulta(paciente,consulta);
     }
 
