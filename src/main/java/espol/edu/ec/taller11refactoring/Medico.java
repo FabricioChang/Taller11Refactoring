@@ -6,7 +6,7 @@ public class Medico extends Persona {
         super(nombre, edad, genero, direccion, telefono, correoElectronico);
     }
 
-    public void realizaConsul(Paciente paciente) {
+    public void realizaConsulta(Paciente paciente) {
         String tratamiento;
         System.out.println("Realizando consulta a " + paciente.getNombre() +
                 " (Solo se usa el objeto persona en este metodo...)");
